@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css"></head>
+<body>
+
+<h2>Investment ROI</h2>
+<input id="amt" placeholder="Amount">
+<input id="yrs" placeholder="Years">
+<button onclick="roi()">Calculate</button>
+<p id="out"></p>
+
+<script>
+function roi(){
+  out.textContent="ROI: $"+(amt.value*(1+yrs.value*0.08)).toFixed(2);
+}
+</script>
+</body>
+</html>

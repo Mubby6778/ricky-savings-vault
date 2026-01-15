@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bank-bg">
+
+    <!-- CREDIT CARD -->
+    <div class="card-container">
+      <div class="credit-card">
+        <div class="card-top">
+          <span class="card-title">RICKY Vault</span>
+          <span class="card-chip"></span>
+        </div>
+
+        <div class="card-balance">
+          <span id="balanceAmount" class="blurred">$2.967.441.33</span>
+          <button class="eye-btn" onclick="requestReveal()">👁</button>
+        </div>
+
+        <div class="card-name">RICKY</div>
+      </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="nav-section">
+      <a href="balance.html">Balance</a>
+      <a href="history.html">History</a>
+      <a href="send.html">Send</a>
+      <a href="more.html">More</a>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+
+
+<h2>Welcome, Ricky</h2>
+
+<div class="grid">
+  <div onclick="go('balance.html')">Balance</div>
+  <div onclick="go('send.html')">Send Money</div>
+  <div onclick="go('history.html')">History</div>
+  <div onclick="go('more.html')">More</div>
+</div>
+
+<div class="card glass-card">
+  <h3>Spending Analytics</h3>
+  <canvas id="spendingChart"></canvas>
+</div>
+
+<div class="card" onclick="location.href='deposit.html'">
+  <h4>Deposit</h4>
+  <p>Check deposit</p>
+</div>
+
+<canvas id="chart"></canvas>
+
+<div id="notifications"></div>
+
+</div>
+
+<script src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

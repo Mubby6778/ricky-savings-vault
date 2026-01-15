@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<h2>Transaction History</h2>
+
+<input id="pin" type="password" placeholder="History PIN">
+<button onclick="loadHistory()">View</button>
+
+<ul id="list"></ul>
+
+<script>
+function loadHistory(){
+  if(pin.value!=="0010"){alert("Wrong PIN");return;}
+  const list=document.getElementById("list");
+  list.innerHTML="";
+
+  for (let y = 2012; y <= 2026; y++) {
+  for (let m = 1; m <= 12; m++) {
+
+    // Stop after Jan 2026
+    if (y === 2026 && m > 1) break;
+
+    const date = `${y}-${String(m).padStart(2,"0")}-03`;
+
+    list.innerHTML += `
+      <li>${date} • Monthly Interest +$45.60</li>
+    `;
+  }
+}
+
+}
+</script>
+</body>
+</html>

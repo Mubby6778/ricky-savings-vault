@@ -1,0 +1,15 @@
+{
+  "name": "Heritage Vault",
+  "short_name": "Vault",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#1a102a",
+  "theme_color": "#f5d36c",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Seed Transactions</title>
+</head>
+<body>
+<h2>Seed Transactions for Ricky</h2>
+<button onclick="seedTransactions()">Seed Transactions</button>
+<p id="status"></p>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getFirestore, doc, updateDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+// 🔹 Your Firebase Config
+const firebaseConfig = {
+  apiKey: "AIzaSyCiYYJfWMj62XB5q3y2CKJgGniI3FmRmmQ",
+  authDomain: "heritage-vault-1d462.firebaseapp.com",
+  projectId: "heritage-vault-1d462",
+  storageBucket: "heritage-vault-1d462.firebasestorage.app",
+  messagingSenderId: "282969532658",
+  appId: "1:282969532658:web:f9a46795e2e81c5520486b"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+async function seedTransactions() {
+  const userId = "Ricky";  // Firestore document ID
+  const totalBalance = 167589;
+  const months = 84; // 2019-2025
+  const monthlyAmount = Number((totalBalance / months).toFixed(2));
+
+  const startYear = 2012;
+  const startMonth = 0; // January
+
+  const transactions = [];
+
+  for(let i = 0; i < months; i++){
+    const year = startYear + Math.floor((startMonth + i)/12);
+    const month = (startMonth + i)%12 + 1;
+    const date = `${year}-${month.toString().padStart(2,'0')}-01`;
+
+    transactions.push({
+      amount: monthlyAmount,
+      type: "interest",
+      description: "Monthly interest",
+      currency: "USD",
+      date: date,
+      time: "09:00"
+    });
+  }
+
+  try {
+    const userRef = doc(db,"users",userId);
+    await updateDoc(userRef,{
+      transactions: transactions
+    });
+    document.getElementById("status").innerText = `✅ Successfully added ${months} transactions`;
+  } catch(err) {
+    document.getElementById("status").innerText = "❌ Error: " + err;
+    console.error(err);
+  }
+}
+</script>
+</body>
+</html>

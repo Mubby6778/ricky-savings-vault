@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deposit Check</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bank-bg">
+
+  <div class="page-overlay">
+
+    <!-- Header -->
+    <header class="page-header">
+      <h2>Deposit Check</h2>
+      <p>Fast, secure & based</p>
+    </header>
+
+    <!-- Deposit Card -->
+    <div class="deposit-card">
+
+      <h3>Deposit your check</h3>
+
+      <!-- Front of Check -->
+      <div class="check-box">
+        <label>Front of check</label>
+        <div class="upload-box">
+          <span>📄 Tap to upload front</span>
+          <input type="file" accept="image/*">
+        </div>
+      </div>
+
+      <!-- Back of Check -->
+      <div class="check-box">
+        <label>Back of check</label>
+        <div class="upload-box">
+          <span>📄 Tap to upload back</span>
+          <input type="file" accept="image/*">
+        </div>
+      </div>
+
+      <!-- Amount -->
+      <div class="form-group">
+        <label>Amount</label>
+        <input type="number" placeholder="$0.00">
+      </div>
+
+      <!-- Submit -->
+      <button class="primary-btn">Submit Deposit</button>
+
+      <p class="deposit-note">
+      </p>
+
+    </div>
+
+    <!-- Back -->
+    <a href="dashboard.html" class="back-link">← Back to dashboard</a>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

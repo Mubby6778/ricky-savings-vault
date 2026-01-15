@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2 id="balanceAmount">••••••</h2>
+<button onclick="toggleBalance()">👁️</button>
+
+
+<input id="pin" type="password" placeholder="Balance PIN">
+<button onclick="showBalance()">Continue</button>
+
+<div id="balBox" style="display:none">
+  <div class="balance-card">
+    <span id="amount">$2.967.441.33</span>
+    <span class="eye" onclick="toggleEye()">👁</span>
+  </div>
+</div>
+
+<!-- Lifestyle background section -->
+<div class="lifestyle-section">
+  <div class="lifestyle-overlay">
+    <h3>Banking made for everyday life</h3>
+    <p>Save, send, and grow money with confidence.</p>
+  </div>
+</div>
+
+<script src="app.js"></script>
+<script>
+function showBalance(){
+  if(pin.value==="0010"){
+    balBox.style.display="block";
+  } else alert("Wrong PIN");
+}
+function toggleEye(){
+  const a=document.getElementById("amount");
+  a.textContent=a.textContent.includes("$")?"••••••":"$2.967.441.33";
+}
+</script>
+</body>
+</html>

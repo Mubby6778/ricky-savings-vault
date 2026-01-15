@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings</title>
+  <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#d4af37">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h2>Settings</h2>
+<ul>
+  <li>Change PIN</li>
+  <li>Update Profile</li>
+  <li>Notifications</li>
+  <li>Theme Preferences</li>
+</ul>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+</body>
+</html>

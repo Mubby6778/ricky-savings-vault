@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Send Money</h2>
+
+<select id="region" onchange="updateFields()">
+  <option value="">Select Region</option>
+  <option value="usa">USA</option>
+  <option value="eu">EU</option>
+  <option value="uk">UK</option>
+</select>
+
+<div id="fields"></div>
+
+<input placeholder="Amount">
+<input id="tpin" type="password" placeholder="Transfer PIN">
+<button onclick="send()">Send</button>
+
+<script src="app.js"></script>
+
+
+
+
+
+
+</script>
+</body>
+</html>
