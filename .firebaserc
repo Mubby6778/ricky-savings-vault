@@ -1,16 +1,5 @@
 {
   "projects": {
-    "default": "heritage-vault-live",
-    "public": "heritage-vault-live"
-  },
-  "targets": {
-    "heritage-vault-1d462": {
-      "hosting": {
-        "default": [
-          "heritage-vault-1d462"
-        ]
-      }
-    }
-  },
-  "etags": {}
+    "default": "ricky-savings-vault"
+  }
 }
